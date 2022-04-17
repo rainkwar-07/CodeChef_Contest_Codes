@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+// madhvender coding!
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int t= sc.nextInt();
+		while(t--!=0) {
+		   int n=sc.nextInt();
+		   int[] arr=new int[n];
+		   long count1=0,count2=0;
+		   for(int i=0;i<n;i++) {
+		      arr[i]=sc.nextInt();
+		      if(arr[i]==1) {
+		         count1++;
+		      }
+		      if(arr[i]==2) {
+		         count2++;
+		      }
+		   }
+		   long ans= count1*(n-count1)+ count1*(count1-1)/2+ count2*(count2-1)/2;
+		    System.out.println(ans);
+		    
+		}
+	}
+}
